@@ -168,7 +168,7 @@ footer {
   background: var(--black);
 }
 
-@media (min-width: 100px) {
+@media (min-width: 200px) {
   body {
     font-size: 1.125rem;
   }
