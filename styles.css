@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Merriweather:400,700');
 
-$white: #fff;
-$black: #302a2b;
-$bg: #f2f2f0;
-$text: #877a7a;
-$button: #bc8364;
-
+:root {
+    --white: #fff;
+    --black: #302a2b;
+    --bg: #f2f2f0;
+    --text: #877a7a;
+    --button: #bc8364;
+}
 * {
   box-sizing: border-box;
   &::before, &::after {
@@ -20,18 +21,18 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  color: $text;
-  background: $bg;
+  color: var(--text);
+  background: var(--bg);
   text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Lora', serif;
-  color: $black;
+  color: var(--black);
 }
 
 h2, h3 {
-  color: $black;
+  color: var(--black);
   font-weight: 400;
   letter-spacing: 0.125rem;
   text-transform: lowercase;
@@ -51,7 +52,7 @@ h2 {
 h3 {
   font-size: 1.625rem;
   margin: 1rem 0;
-  border-bottom: 0.125rem solid $black;
+  border-bottom: 0.125rem solid var(--black);
 }
 
 h4 {
@@ -73,11 +74,11 @@ a {
   font-weight: 700;
   padding: 1rem 1.325rem;
   border: 0;
-  color: $white;
-  background: $button;
+  color: var(--white);
+  background: var(--button);
   transition: all 0.3s ease;
   &:hover {
-    background: $black;
+    background: var();
   }
 }
 
@@ -94,7 +95,7 @@ a {
 }
 
 header {
-  background: linear-gradient(-8deg, $bg 0%, $bg 50%, $white 50%, $white 50%);
+  background: linear-gradient(-8deg,var(--bg) 0%, var(--bg) 50%, var(--white) 50%, var(--white) 50%);
 }
 
 main {
@@ -108,7 +109,7 @@ main {
   .menu-list {
     margin: 0 0 1.5rem 0;
     padding: 0 1rem 2rem 1rem;
-    background: $white;
+    background: var(--white);
     > div {
       &:nth-child(1) {
         padding: 0.5rem 1rem;
@@ -152,7 +153,7 @@ img {
     right: 0;
     width: 100%;
     height: 25rem;
-    background: $black;
+    background: var(--black);
     transform-origin: 0% 100%;
     animation: revealBottom 1s 0.7s cubic-bezier(0.23, 1, 0.75, 1) forwards;
   }
@@ -164,16 +165,16 @@ img {
 
 footer {
   text-align: center;
-  background: $black;
+  background: var(--black);
 }
 
-@media (min-width: $md) {
+@media (min-width: 200px) {
   body {
     font-size: 1.125rem;
   }
 
   header {
-    background: linear-gradient(-8deg, $bg 0%, $bg 25%, $white 25%, $white 25%);
+    background: linear-gradient(-8deg, var(--bg) 0%, var(--bg) 25%, var(--white) 25%, var(--white) 25%);
   }
 
   .hero {
